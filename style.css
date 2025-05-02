@@ -12,17 +12,132 @@
     --gray-950: #111111;
     --gray-500: #6B6B6B;
     --white: #ffffff;
-    --primary-font: "Figtree",sans-serif;;
+    --primary-font: "Figtree",sans-serif;
     --bold: 700;
     --medium: 500;
     --light: 300;
+    --corner-round: 1.25rem;
+    --preset1: 1.5rem;
+    --preset2: 1rem;
+    --preset3: 0.75rem;
+    --extrabold: 800;
+}
+
+button {
+    border: none;
+    outline: none;
 }
 
 body {
-    font-family: var(-primary);
+    font-family: var(--primary-font);
     background-color: var(--yellow);
     max-width: 1440px;
     line-height: 150%;
     letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    color: var(--gray-950);
 }
 
+.flexcolumn {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: var(--preset1);
+}
+
+h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+h1,.author-name,#status {
+    font-weight: var(--extrabold);
+}
+
+.author-name,#status {
+    font-size: var(--preset3);
+}
+
+/* 
+=====================
+    Card containaer
+=====================
+*/
+
+.card {
+    padding: 1.5rem;
+    background-color: var(--white);
+    width: min-content;
+    overflow: hidden;
+    row-gap: 1.5rem;
+    box-shadow: 8px 8px 0px 3px black, 1px 1px 0 2px black;
+}
+
+
+/* 
+=====================
+    image containaer
+=====================
+*/
+
+.image-container,.card {
+    border-radius: var(--corner-round);
+}
+
+.image-container {
+    width: 100%;
+    height: 12.5rem;
+}
+
+/* 
+============================
+    main content containaer
+============================
+*/
+
+#main-contents {
+    row-gap: 0.75rem;
+}
+
+#status {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--yellow);
+}
+
+.date-time {
+    font-weight: var(--medium);
+    font-size: var(--preset3);
+}
+
+.content {
+    font-weight: var(--medium) ;
+    font-size: var(--preset2);
+    color: var(--gray-500);
+}
+
+/* 
+============================
+    AUTHOR container
+============================
+*/
+
+.author {
+    display: flex;
+    column-gap: .75rem;
+    align-items: center;
+    padding: 0.344rem 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
