@@ -160,7 +160,7 @@ h1,.author-name,#status {
 
 @media screen and (max-width: 768px) {
     body {
-        min-height: 100dvh;
+        min-height: 150dvh;
     }
 }
 
